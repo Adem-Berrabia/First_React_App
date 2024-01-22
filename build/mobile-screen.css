@@ -1,0 +1,11 @@
+.hide-when-mobile {
+  flex-direction: column;
+}
+p,
+button,
+a {
+  font-size: 17px !important;
+}
+h1 a{
+  font-size: 25px !important;
+}

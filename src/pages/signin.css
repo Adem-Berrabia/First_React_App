@@ -1,0 +1,46 @@
+.forget_pass {
+  background-color: rgb(173, 172, 172);
+  height: 333px;
+  width: 400px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  transition: 0.8s;
+  transform: translateY(-100vh);
+  scale: 0;
+}
+.show_forget_pass {
+  scale: 1;
+  transform: translateY(0);
+}
+.line_forget_pass {
+  font-size: 19px;
+  cursor: pointer;
+  font-weight: normal;
+}
+.line_forget_pass:hover {
+  font-size: 20px;
+  font-weight: 200;
+  transition: all 0.3s;
+}
+
+.close .fa-xmark {
+  color: #444;
+  font-size: 29px;
+  position: absolute;
+  top: 14px;
+  right: 20px;
+}
+.close .fa-xmark:hover {
+  color: orange;
+  transform: rotate(180deg);
+  transition: all 0.5s;
+}
+.check_email {
+  font-size: 16px;
+  color: #333 !important;
+  margin-top: 25px;
+  line-height: 25px;
+}
