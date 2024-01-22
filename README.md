@@ -32,7 +32,7 @@ Start the server
   npm start
 ```
 
-## Author : Adem Rb3
+## Author : Adem Berrabia
 
 - Github - [Github](https://github.com/ITSADEM)
 - Facebook - [Facebook](https://www.facebook.com/profile.php?id=100022888083591)
