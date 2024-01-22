@@ -4,7 +4,7 @@ First Website , App build with React JS.
 
 ## Built with
 
-- [React-JS](https://react.dev/) - JS library
+- [React-JS](https://react.dev/) library
 
 ## Run Locally
 
