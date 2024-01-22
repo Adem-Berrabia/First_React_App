@@ -17,7 +17,7 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd react-app
+  cd First_React_App
 ```
 
 Install dependencies
