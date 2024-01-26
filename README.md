@@ -1,6 +1,6 @@
 # React-App
 
-Website application Implementing User Login and SignUp with ReactJS and Firebase
+Website application Implementing User Login and SignUp with ReactJS and Firebase.
 
 ## Built with
 
