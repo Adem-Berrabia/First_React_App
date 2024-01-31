@@ -1,3 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=AR+One+Sans&family=Cairo:wght@300;400&family=Montserrat:ital,wght@1,300&display=swap");
+.flex {
+  align-items: center;
+  display: flex;
+}
+
+main {
+  color: #222;
+  min-height: calc(100vh - 128.64px);
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.mt {
+  margin-top: 1em;
+}
+.mtt {
+  margin-top: 2em;
+}
+.mttt {
+  margin-top: 3em;
+}
+.center {
+  text-align: center;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -13,10 +41,9 @@ body {
   margin: 0;
   padding: 0;
   color: white;
-  font-family: sans-serif;
+  font-family: "cairo", sans-serif;
   text-decoration: none;
   list-style: none;
-  letter-spacing: 1px;
 }
 html {
   box-sizing: border-box;
@@ -31,8 +58,8 @@ header {
   background-color: #1b1b1b;
 }
 h1 {
-  padding: 20px;
   font-size: 25px;
+  padding: 8px 10px;
 }
 /* ============
 signin signup
@@ -103,12 +130,36 @@ form button {
 .delete:hover {
   scale: 1.1;
   transition: all 0.15s;
+  cursor: pointer;
 }
-.Dark main p{
+.Dark main p {
   color: #fff;
-
 }
-.Light main p{
+.Light main p {
+  color: #111;
+}
+.Light main div h3{
   color: #111;
 
+}
+.Light .all-tasks h1{
+  color: #333;
+}
+/* ==============================
+     Animation for span element
+=============================== */
+
+span {
+  animation: heart 2s infinite linear;
+}
+
+@keyframes heart {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }

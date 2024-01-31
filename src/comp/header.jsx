@@ -6,16 +6,19 @@ import ThemeContext from "../context/ThemeContext";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../firebase/config";
 import { signOut } from "firebase/auth";
+import { useTranslation } from "react-i18next";
 
 export default function Header() {
+  const { t, i18n } = useTranslation();
   const { theme, ToggleTheme } = useContext(ThemeContext);
   const [user] = useAuthState(auth);
   return (
     <div className="myheader">
-
       <header className="hide-when-mobile adem">
         <h1>
-          <Link className="logo" to="/">Adem Berrabia</Link>
+          <Link className="logo" to="/">
+            Task Management
+          </Link>
         </h1>
         <i
           onClick={() => ToggleTheme(theme === "Light" ? "Dark" : "Light")}
@@ -26,17 +29,53 @@ export default function Header() {
           className="fa-solid fa-sun"
         ></i>
         <ul className="flex">
+          <li className="main-list lang">
+            {t("lang")}
+            <ul className="lang-box">
+              <li
+                onClick={() => {
+                  i18n.changeLanguage("en");
+                }}
+              >
+                <p>English</p>
+                {i18n.language === "en" && (
+                  <i className="fa-solid fa-check"></i>
+                )}
+              </li>
+              <li
+                onClick={() => {
+                  i18n.changeLanguage("fr");
+                }}
+              >
+                <p>French</p>
+                {i18n.language === "fr" && (
+                  <i className="fa-solid fa-check"></i>
+                )}
+              </li>
+              <li
+                onClick={() => {
+                  i18n.changeLanguage("ar");
+                }}
+              >
+                <p>Arabic</p>
+                {i18n.language === "ar" && (
+                  <i className="fa-solid fa-check"></i>
+                )}
+              </li>
+            </ul>
+          </li>
+
           {!user && (
             <li className="main-list">
               <NavLink className="main-link" to="/signin">
-                Sign-In
+                {t("signin")}
               </NavLink>
             </li>
           )}
           {!user && (
             <li className="main-list">
               <NavLink className="main-link" to="/signup">
-                Sign-Up
+                {t("signup")}
               </NavLink>
             </li>
           )}
@@ -53,24 +92,22 @@ export default function Header() {
               }}
               className="main-list"
             >
-              <button className="main-link signout">Sign-Out</button>
+              <button className="main-link signout">{t("signout")}</button>
             </li>
           )}
 
           {user && (
             <li className="main-list">
               <NavLink className="main-link" to="/About">
-                About
+                {t("support")}
               </NavLink>
-              
             </li>
           )}
           {user && (
             <li className="main-list">
               <NavLink className="main-link" to="/Profile">
-                Profile
+                {t("account")}
               </NavLink>
-              
             </li>
           )}
         </ul>

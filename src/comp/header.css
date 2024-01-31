@@ -27,7 +27,7 @@
   font-size: 20px;
 }
 .fa-solid:hover {
-  font-size: 24px;
+  font-size: 22px;
   cursor: pointer;
   transition: all 0.1s;
 }
@@ -40,23 +40,106 @@
 .Dark .fa-moon {
   display: none;
 }
-.signout{
-  all: unset  ;
+.signout {
+  all: unset;
   padding: 6px 5px;
 }
-.logo{
+.main-list {
+  padding: 10px 12px 14px;
+  font-size: 17px;
+  position: relative;
+}
+
+.main-link {
+  padding: 8px 15px;
+}
+
+.main-link:hover,
+.main-link.active {
+  color: cyan;
+  box-shadow: 0 0 5px cyan;
+  border-radius: 5px;
+}
+ul.lang-box {
+  display: none;
+  position: absolute;
+  left: 5px;
+  top: 45px;
+  background-color: #1b1b1b;
+  border-top: 1px solid cyan;
+  width: 100px;
+  border-radius: 5px;
+  z-index: 5;
+  text-align: center;
+}
+ul.lang-box li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 5px;
+  border-bottom: 1px solid black;
+  font-size: 15px;
+  transition: 0.15s;
+}
+ul.lang-box li:hover {
+  background-color: #151515;
+  font-size: 16px;
+  cursor: pointer;
+}
+li.lang:hover ul.lang-box {
+  display: block;
+}
+
+/* .logo {
   animation: logoani 5s infinite;
 }
 @keyframes logoani {
-  0%,100%{
+  0%,
+  100% {
     opacity: 0.8;
   }
-  50%
-  {
+  50% {
     letter-spacing: 7px;
     opacity: 1;
   }
 }
+@keyframes down {
+  0% {
+    transform: translateY(-100px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+} */
+
+/* header {
+  animation: down 1s 1;
+} */
+
+/* h1 {
+  animation: ltr 2s 1;
+}
+
+@keyframes ltr {
+  0% {
+    transform: translateX(-100px);
+    color: cyan;
+  }
+
+  50% {
+    transform: translateX(150px);
+  }
+
+  70% {
+    transform: translateX(-150px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+} */
+
 /* ==================
     3. header of mobile
 ===================== */

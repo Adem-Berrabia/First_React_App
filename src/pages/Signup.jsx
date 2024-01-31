@@ -15,10 +15,12 @@ import {
   sendEmailVerification,
 } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
-import Error404 from '../pages/Error404'
+import Error404 from "../pages/Error404";
+import ReactLoading from "react-loading";
 
 export default function SignUp() {
   const navigate = useNavigate();
+  const [showLoading, setshowLoading] = useState(false);
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
   const [hasError, sethasError] = useState(false);
@@ -54,9 +56,10 @@ export default function SignUp() {
       );
     }
   }
-  const SignUpBtn = (eo) => {
+  const SignUpBtn =async (eo) => {
     eo.preventDefault();
-    createUserWithEmailAndPassword(auth, email, password)
+    setshowLoading(true);
+    await createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed up
         // const user = userCredential.user;
@@ -89,6 +92,9 @@ export default function SignUp() {
         sethasError(true);
 
         switch (errorCode) {
+          case "auth/operation-not-allowed":
+            setfirebaseError("Register Close Right Now Sorry");
+            break;
           case "auth/invalid-email":
             setfirebaseError("Wrong Email");
             break;
@@ -107,6 +113,8 @@ export default function SignUp() {
             break;
         }
       });
+
+    setshowLoading(false);
   };
 
   if (!user) {
@@ -153,12 +161,23 @@ export default function SignUp() {
               }}
             >
               {" "}
-              Sign Up
+              {showLoading ? (
+                <div className="flex" style={{ justifyContent: "center" }}>
+                  <ReactLoading
+                    type={"spin"}
+                    color={"white"}
+                    height={20}
+                    width={20}
+                  />
+                </div>
+              ) : (
+                "Sign Up"
+              )}
             </button>
             <p className="account">
               Already have an account <Link to="/signin">Sign in </Link>
             </p>
-            {hasError && <h6>{firebaseError}</h6>}
+            {hasError && <h6 className="mt">{firebaseError}</h6>}
           </form>
         </main>
         <Footer />

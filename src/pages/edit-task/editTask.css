@@ -1,0 +1,129 @@
+.edit-task {
+  min-height: calc(100vh - 128.64px);
+}
+
+/* title */
+
+.edit-task .title-input {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 11px;
+}
+
+.edit-task .title-input:focus {
+  outline: none;
+}
+
+.edit-task .fa-pen-to-square {
+  font-size: 20px;
+  transition: 0.2s;
+  margin-left: 10px;
+}
+.edit-task .fa-pen-to-square:hover {
+  font-size: 24px;
+  cursor: pointer;
+}
+/* sub-tasks section */
+
+.edit-task section.sub-task {
+  max-width: 630px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.edit-task .parent-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.edit-task .time time,
+.edit-task p.time {
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 16px;
+  color: rgb(120, 189, 250) !important;
+}
+.edit-task #checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: teal;
+}
+.edit-task label {
+  position: relative;
+  bottom: 3px;
+  margin-left: 11px;
+  font-size: 17px;
+}
+.edit-task .card-task {
+  box-shadow: 0 5px 30px 0 rgb(0 0 0 /25%);
+  background-color: rgb(65, 71, 84);
+  padding: 16px;
+  border-radius: 5px;
+  transition: 0.2s;
+  justify-content: space-between;
+  margin-bottom: 11px;
+}
+.edit-task .card-task:hover {
+  background-color: rgb(83, 90, 105);
+  border-left: 4px solid whitesmoke;
+}
+.edit-task .fa-trash {
+  padding-right: 19px;
+  color: rgb(237, 181, 181);
+}
+/* add more btn && delete btn*/
+.edit-task .add-more-btn {
+  background-color: teal;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  padding: 9px 12px;
+}
+.edit-task .delete {
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.add-more-btn:hover {
+  scale: 1.1;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+
+.edit-task .add,
+.edit-task .cancel {
+  background-color: teal;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-left: 11px;
+  border: none;
+}
+.edit-task .add-new-task {
+  box-shadow: 0 5px 30px 0 rgb(0 0 0 /25%);
+  background-color: rgb(65, 71, 84);
+  border-radius: 5px;
+  animation: subTask 0.5s ;
+}
+
+@keyframes subTask {
+  0%{scale: 0;}
+  50%{scale: 1.2;}
+  100%{scale: 1;}
+}
+.edit-task input{
+  margin-top: 18px;
+  margin-left: 10px;
+}
+
+/* colors for light theme */
+.Light .edit-task .title-input,
+.Light .fa-pen-to-square,
+.Light label,
+.Light .time {
+  color: rgb(65, 71, 84);
+}

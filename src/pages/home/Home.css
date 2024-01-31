@@ -1,0 +1,120 @@
+/* OPTIONS */
+
+.home .parent-of-btns button {
+  background-color: royalblue;
+  font-size: 16px !important;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.home select {
+  align-self: flex-end;
+  background-color: #666;
+  padding: 7px 12px;
+  border-radius: 4px;
+}
+
+/* SHOW ALL DATA */
+.home .all-tasks {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.home .task-link{
+  display: block;
+  height: 100%;
+}
+.home .all-tasks .one-task {
+  border: 1px solid antiquewhite;
+  margin: 40px 20px;
+  width: 300px;
+  height: 141px;
+  border-radius: 5px;
+  transition: 0.2s;
+  position: relative;
+}
+.home .all-tasks .one-task:hover {
+  border-left: 8px solid antiquewhite;
+  cursor: pointer;
+}
+.home .all-tasks .one-task h2 {
+  font-size: 25px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.home .all-tasks .one-task li {
+  list-style: circle;
+  list-style-position: inside;
+  font-size: 12px;
+  line-height: 28px;
+  margin: 0 11px;
+  text-align: start;
+}
+.home .all-tasks .one-task .time1 time{
+  font-size: 14px;
+  font-weight: normal;
+  color: rgb(164, 213, 255);
+  line-height: 17px;
+  position: absolute;
+  bottom: 5px;
+  right: 9px;
+}
+/* ADD NEW TASK BTN */
+.home .add-task-btn:hover {
+  scale: 1.1;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+.home .add-task-btn {
+  background-color: teal;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 8px 12px;
+  border: none;
+  margin-bottom: 1em;
+}
+.home .add-task-btn .fa-plus {
+  font-size: 15px;
+}
+/* colors for light theme */
+.Light .home .one-task,
+.Light .one-task li,
+.Light .one-task h2,
+.Light .time1 time,
+.Light .home .all-tasks .one-task {
+  color: rgb(34, 36, 43) !important;
+  background-color: rgb(173, 240, 164) !important;
+}
+
+.home .modal li {
+  font-size: 14px;
+  color: #333;
+  list-style-type: circle;
+  list-style-position: inside;
+  margin-bottom: 8px;
+}
+.home .show-msg {
+  background-color: whitesmoke;
+  color: #1b1b1b;
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-weight: normal;
+  font-size: 20px;
+  position: fixed;
+  top: 85px;
+  transition: all 1s;
+}
+.home .fa-circle-check {
+  color: rgb(40, 131, 131);
+  margin-left: 5px;
+}
+.home .modal-content {
+  /* display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start; */
+  margin-top: 85px;
+  height: 100%;
+  text-align: left;
+}

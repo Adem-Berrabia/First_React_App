@@ -1,20 +1,4 @@
-.forget_pass {
-  background-color: rgb(173, 172, 172);
-  height: 333px;
-  width: 400px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  transition: 0.8s;
-  transform: translateY(-100vh);
-  scale: 0;
-}
-.show_forget_pass {
-  scale: 1;
-  transform: translateY(0);
-}
+
 .line_forget_pass {
   font-size: 19px;
   cursor: pointer;

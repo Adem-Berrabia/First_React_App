@@ -1,10 +1,8 @@
-import React from "react";
 import Header from "../comp/header";
 import Footer from "../comp/footer";
 import Loading from "../comp/Loading";
-import Error404 from '../pages/Error404'
+import Error404 from "../pages/Error404";
 
-import MainContetnt from "../comp/mainContetnt";
 import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -13,6 +11,7 @@ import { auth } from "../firebase/config";
 
 export default function About() {
   const [user, loading, error] = useAuthState(auth);
+
 
   const navigate = useNavigate();
   useEffect(() => {
@@ -37,10 +36,14 @@ export default function About() {
       return (
         <>
           <Helmet>
-            <title>About Page</title>
+            <title>Support Page</title>
           </Helmet>
           <Header />
-          <MainContetnt PageName="About Page" />
+          <main>
+              <div >
+                <h3>Support Page Soon.......</h3>
+              </div>
+          </main>
           <Footer />
         </>
       );

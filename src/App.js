@@ -1,18 +1,19 @@
-import Home from "./pages/Home";
+import Home from "./pages/home/Home";
 import About from "./pages/About";
-import Error404 from './pages/Error404'
+import Error404 from "./pages/Error404";
 import Profile from "./pages/Profile";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { useContext } from "react";
 import ThemeContext from "./context/ThemeContext";
-import SignIn from "./pages/signin";
+import SignIn from "./pages/signin/signin";
 import SignUp from "./pages/Signup";
+import EditTask from "./pages/edit-task/editTask";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
-    errorElement: <Error404/>,
+    errorElement: <Error404 />,
   },
   {
     path: "/signin",
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
   {
     path: "/Profile",
     element: <Profile />,
+  },
+  {
+    path: "/editTask/:StringId",
+    element: <EditTask />,
   },
 ]);
 function App() {

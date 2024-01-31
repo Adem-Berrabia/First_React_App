@@ -2,8 +2,8 @@
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "name": "Adem_Berrabia",
-  "short_name": "Adem_Berrabia",
+  "name": "Task Management",
+  "short_name": "Task Management",
   "icons": [
     {
       "src": "/icon-192x192.png",

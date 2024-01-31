@@ -30,7 +30,7 @@ export default function Profile() {
   if (error) {
     return (
       <div>
-        <p>Error: {error}</p>
+        <p>Error: {error.message}</p>
       </div>
     );
   }
@@ -63,7 +63,7 @@ export default function Profile() {
           `}</style>
         </Helmet>
         <Header />
-        <main>
+        <main style={{ lineHeight: "50px" }}>
           <h6>Email : {user.email}</h6>
           <h6>UserName : {user.displayName}</h6>
           <h6>
